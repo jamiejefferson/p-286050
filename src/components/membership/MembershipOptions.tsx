@@ -11,7 +11,7 @@ const MembershipCard: React.FC<MembershipCardProps> = ({
   description,
 }) => {
   return (
-    <div className="rounded flex flex-col w-60 p-8 max-md:px-5 bg-white text-[#E10A0A] border-[rgba(222,221,220,1)] border-solid border-2">
+    <div className="rounded flex flex-col w-60 p-8 max-md:px-5 bg-white text-[#E10A0A] border-[rgba(222,221,220,1)] border-solid border-2 transition-all duration-300 ease-in-out hover:scale-105 hover:bg-[#f5f5f5]">
       <div className="text-xl font-medium leading-[0.8] uppercase">{title}</div>
       <div className="text-lg font-normal leading-6 mt-4">{description}</div>
     </div>
