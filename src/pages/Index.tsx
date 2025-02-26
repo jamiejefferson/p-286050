@@ -1,6 +1,5 @@
 
 import React from "react";
-import { BrowserFrame } from "@/components/membership/BrowserFrame";
 import { Header } from "@/components/membership/Header";
 import { MessageBubble } from "@/components/membership/MessageBubble";
 import { SelectField } from "@/components/membership/SelectField";
@@ -16,7 +15,6 @@ const Index = () => {
         className="absolute h-full w-full object-cover inset-0"
       />
 
-      <BrowserFrame />
       <Header />
 
       <main className="relative z-0 flex w-full flex-col text-center uppercase leading-[0.8] pt-40 pb-[120px] px-20 max-md:max-w-full max-md:px-5 max-md:py-[100px] animate-fade-in">
