@@ -19,7 +19,7 @@ const Index = () => {
       <BrowserFrame />
       <Header />
 
-      <main className="relative z-0 flex w-full flex-col text-center uppercase leading-[0.8] pt-40 pb-[120px] px-20 max-md:max-w-full max-md:px-5 max-md:py-[100px]">
+      <main className="relative z-0 flex w-full flex-col text-center uppercase leading-[0.8] pt-40 pb-[120px] px-20 max-md:max-w-full max-md:px-5 max-md:py-[100px] animate-fade-in">
         <h1 className="text-[rgba(50,50,50,1)] text-base font-normal max-md:max-w-full">
           START YOUR NEW WELLNESS ERA
         </h1>
@@ -28,7 +28,7 @@ const Index = () => {
         </h2>
       </main>
 
-      <section className="relative z-0 w-full pb-[150px] max-md:max-w-full max-md:pb-[100px]">
+      <section className="relative z-0 w-full pb-[150px] max-md:max-w-full max-md:pb-[100px] [&>*]:animate-fade-in [&>*]:opacity-0 [&>*]:animate-delay-[var(--delay)]" style={{"--delay": "0.2s"}}>
         <MessageBubble>
           Hello 👋 <br />
           Welcome to Virgin Active Qatar,hope you are well today.
