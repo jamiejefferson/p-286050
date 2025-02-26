@@ -28,7 +28,10 @@ const Index = () => {
         </h2>
       </main>
 
-      <section className="relative z-0 w-full pb-[150px] max-md:max-w-full max-md:pb-[100px] [&>*]:animate-fade-in [&>*]:opacity-0 [&>*]:animate-delay-[var(--delay)]" style={{"--delay": "0.2s"}}>
+      <section 
+        className="relative z-0 w-full pb-[150px] max-md:max-w-full max-md:pb-[100px] [&>*]:animate-fade-in [&>*]:opacity-0 [&>*]:animate-delay-[var(--delay)]" 
+        style={{ "--delay": "0.2s" } as React.CSSProperties}
+      >
         <MessageBubble>
           Hello 👋 <br />
           Welcome to Virgin Active Qatar,hope you are well today.
