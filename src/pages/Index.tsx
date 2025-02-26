@@ -1,3 +1,4 @@
+
 import React from "react";
 import { BrowserFrame } from "@/components/membership/BrowserFrame";
 import { Header } from "@/components/membership/Header";
@@ -22,7 +23,7 @@ const Index = () => {
         <h1 className="text-[rgba(50,50,50,1)] text-base font-normal max-md:max-w-full">
           START YOUR NEW WELLNESS ERA
         </h1>
-        <h2 className="text-[#1E1E1E] text-[64px] font-medium tracking-[-2.56px] mt-4 max-md:max-w-full max-md:text-[40px]">
+        <h2 className="font-poppins font-extrabold text-[#1E1E1E] text-[64px] tracking-[-2.56px] mt-4 max-md:max-w-full max-md:text-[40px]">
           MEMBERSHIP ENQUIRY
         </h2>
       </main>
