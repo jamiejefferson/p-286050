@@ -17,7 +17,7 @@ const Index = () => {
 
       <Header />
 
-      <main className="relative z-0 flex w-full flex-col text-center uppercase leading-[0.8] pt-60 pb-[120px] px-20 max-md:max-w-full max-md:px-5 max-md:py-[100px] animate-fade-in">
+      <main className="relative z-0 flex w-full flex-col text-center uppercase leading-[0.8] pt-60 pb-[120px] px-20 max-md:max-w-full max-md:px-5 max-md:pt-20 max-md:pb-[60px] animate-fade-in">
         <h1 className="text-[rgba(50,50,50,1)] text-base font-normal max-md:max-w-full">
           START YOUR NEW WELLNESS ERA
         </h1>
