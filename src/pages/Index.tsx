@@ -67,7 +67,11 @@ const Index = () => {
         <DurationOptions />
 
         <div className="self-stretch flex-1 shrink basis-[0%] w-full gap-2 text-5xl text-[#1E1E1E] font-medium whitespace-nowrap uppercase leading-[0.8] mt-16 px-[200px] py-2 max-md:max-w-full max-md:text-[40px] max-md:mt-10 max-md:px-5">
-          ...
+          <span className="inline-flex">
+            <span className="animate-bounce">.</span>
+            <span className="animate-bounce" style={{ animationDelay: '0.2s' }}>.</span>
+            <span className="animate-bounce" style={{ animationDelay: '0.4s' }}>.</span>
+          </span>
         </div>
       </section>
 
