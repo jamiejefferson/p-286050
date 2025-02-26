@@ -10,20 +10,17 @@ import { Footer } from "@/components/membership/Footer";
 
 const Index = () => {
   return (
-    <div className="flex flex-col overflow-hidden relative min-h-[3657px] pt-8">
-      <img
-        src="https://cdn.builder.io/api/v1/image/assets/69592d0036a7475dbb0be3839bbc4638/b19662975b086f0e2108837824afdf86e6f5252fd472c80be87e553a39c196a3?placeholderIfAbsent=true"
-        className="absolute h-full w-full object-cover inset-0"
-      />
+    <div className="flex flex-col overflow-hidden relative min-h-[3657px] pt-8 bg-[#D946EF]">
+      {/* Removed background image and replaced with pink background color */}
 
       <BrowserFrame />
       <Header />
 
       <main className="relative z-0 flex w-full flex-col text-center uppercase leading-[0.8] pt-40 pb-[120px] px-20 max-md:max-w-full max-md:px-5 max-md:py-[100px] animate-fade-in">
-        <h1 className="text-[rgba(50,50,50,1)] text-base font-normal max-md:max-w-full">
+        <h1 className="text-white text-base font-normal max-md:max-w-full">
           START YOUR NEW WELLNESS ERA
         </h1>
-        <h2 className="font-poppins font-extrabold text-[#1E1E1E] text-[64px] tracking-[-2.56px] mt-4 max-md:max-w-full max-md:text-[40px]">
+        <h2 className="font-poppins font-extrabold text-white text-[64px] tracking-[-2.56px] mt-4 max-md:max-w-full max-md:text-[40px]">
           MEMBERSHIP ENQUIRY
         </h2>
       </main>
@@ -68,7 +65,7 @@ const Index = () => {
 
         <DurationOptions />
 
-        <div className="self-stretch flex-1 shrink basis-[0%] w-full gap-2 text-5xl text-[#1E1E1E] font-medium whitespace-nowrap uppercase leading-[0.8] mt-16 px-[200px] py-2 max-md:max-w-full max-md:text-[40px] max-md:mt-10 max-md:px-5">
+        <div className="self-stretch flex-1 shrink basis-[0%] w-full gap-2 text-5xl text-white font-medium whitespace-nowrap uppercase leading-[0.8] mt-16 px-[200px] py-2 max-md:max-w-full max-md:text-[40px] max-md:mt-10 max-md:px-5">
           ...
         </div>
       </section>
