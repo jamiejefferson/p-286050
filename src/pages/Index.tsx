@@ -1,5 +1,5 @@
 
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Header } from "@/components/membership/Header";
 import { MessageBubble } from "@/components/membership/MessageBubble";
 import { SelectField } from "@/components/membership/SelectField";
@@ -7,8 +7,40 @@ import { MembershipOptions } from "@/components/membership/MembershipOptions";
 import { DurationOptions } from "@/components/membership/DurationOptions";
 import { Footer } from "@/components/membership/Footer";
 import { NavigationBar } from "@/components/membership/NavigationBar";
+import { WelcomeModal } from "@/components/membership/WelcomeModal";
+import { useToast } from "@/hooks/use-toast";
 
 const Index = () => {
+  const [showModal, setShowModal] = useState(false);
+  const [titleLoaded, setTitleLoaded] = useState(false);
+  const { toast } = useToast();
+
+  useEffect(() => {
+    // Wait a short delay before showing the title animation
+    const titleTimer = setTimeout(() => {
+      setTitleLoaded(true);
+    }, 500);
+
+    // Show modal after a delay
+    const modalTimer = setTimeout(() => {
+      setShowModal(true);
+    }, 2000);
+
+    return () => {
+      clearTimeout(titleTimer);
+      clearTimeout(modalTimer);
+    };
+  }, []);
+
+  const handleAccept = () => {
+    setShowModal(false);
+    toast({
+      title: "Offer accepted",
+      description: "Thanks for your interest!",
+      duration: 3000,
+    });
+  };
+
   return (
     <div className="flex flex-col overflow-hidden relative min-h-[3657px] pt-8">
       <img
@@ -20,11 +52,17 @@ const Index = () => {
       
       <Header />
 
-      <main className="relative z-0 flex w-full flex-col text-center uppercase leading-[0.8] pt-60 pb-[120px] px-20 max-md:max-w-full max-md:px-5 max-md:pt-20 max-md:pb-[60px] animate-fade-in">
-        <h1 className="text-[rgba(50,50,50,1)] text-base font-normal max-md:max-w-full">
+      <main className="relative z-0 flex w-full flex-col text-center uppercase leading-[0.8] pt-60 pb-[120px] px-20 max-md:max-w-full max-md:px-5 max-md:pt-20 max-md:pb-[60px]">
+        <h1 className="text-[rgba(50,50,50,1)] text-base font-normal max-md:max-w-full animate-fade-in">
           START YOUR NEW WELLNESS ERA
         </h1>
-        <h2 className="font-poppins font-extrabold text-[#1E1E1E] text-[64px] tracking-[-2.56px] mt-4 max-md:max-w-full max-md:text-[40px]">
+        <h2 
+          className={`font-poppins font-extrabold text-[#1E1E1E] text-[64px] tracking-[-2.56px] mt-4 max-md:max-w-full max-md:text-[40px] transition-all duration-1000 transform ${
+            titleLoaded 
+              ? "opacity-100 translate-y-0 scale-100" 
+              : "opacity-0 translate-y-20 scale-90"
+          }`}
+        >
           MEMBERSHIP ENQUIRY
         </h2>
       </main>
@@ -79,6 +117,8 @@ const Index = () => {
       </section>
 
       <Footer />
+
+      {showModal && <WelcomeModal onAccept={handleAccept} />}
     </div>
   );
 };
