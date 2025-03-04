@@ -6,6 +6,7 @@ import { SelectField } from "@/components/membership/SelectField";
 import { MembershipOptions } from "@/components/membership/MembershipOptions";
 import { DurationOptions } from "@/components/membership/DurationOptions";
 import { Footer } from "@/components/membership/Footer";
+import { NavigationBar } from "@/components/membership/NavigationBar";
 
 const Index = () => {
   return (
@@ -15,6 +16,8 @@ const Index = () => {
         className="absolute h-full w-full object-cover inset-0"
       />
 
+      <NavigationBar />
+      
       <Header />
 
       <main className="relative z-0 flex w-full flex-col text-center uppercase leading-[0.8] pt-60 pb-[120px] px-20 max-md:max-w-full max-md:px-5 max-md:pt-20 max-md:pb-[60px] animate-fade-in">
